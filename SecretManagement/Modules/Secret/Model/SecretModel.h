@@ -33,4 +33,12 @@
  *  @param failure 错误信息
  */
 + (void)getSecretListSuccess:(void (^)(NSArray *secretList))success failure:(void (^)(NSError *error))failure;
+
+/**
+ *  读取安全Key
+ *
+ *  @param success 返回安全KEY
+ *  @param failure 错误信息
+ */
++ (void)getSecretSafeKey:(void (^)(NSString *safeKey))success failure:(void (^)(NSError *error))failure;
 @end

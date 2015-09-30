@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HeadView.h"
 
-@interface SecretUpdateViewController : UIViewController
+typedef NS_ENUM(NSUInteger, SecretType) {
+    SecretType_Add,
+    SecretType_Update,
+};
+@interface SecretUpdateViewController : UIViewController<HeadViewDelegate>
+@property (weak, nonatomic) IBOutlet HeadView *headView;
+@property (assign, nonatomic) SecretType secretType;
 
 @end

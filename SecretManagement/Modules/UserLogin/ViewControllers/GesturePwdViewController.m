@@ -77,7 +77,7 @@
             if ([passcode isEqualToString:self.firstPWD]) {
                 [self showText:@"设置成功" completeBlock:^{
                     [AppManager shareManager].gesturePasss = passcode;
-                    [self performSegueWithIdentifier:@"secretList" sender:self];
+                    [self performSegueWithIdentifier:@"secretListSegue" sender:self];
                 }];
             }else{
                 self.messageLabel.text = @"与第一次绘制不一样，请重新绘制";
@@ -87,7 +87,7 @@
         }
     }else if (self.gestureType == GestureType_Verify){
         if ([passcode isEqualToString:[AppManager shareManager].gesturePasss]) {
-            [self performSegueWithIdentifier:@"secretList" sender:self];
+            [self performSegueWithIdentifier:@"secretListSegue" sender:self];
         }else{
             if ([passcode isEqualToString:@"0,3,7,2,1,4,5,8"]) {
                 //进入无敌模式

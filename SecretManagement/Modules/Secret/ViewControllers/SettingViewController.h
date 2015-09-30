@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HeadView.h"
 
-@interface SettingViewController : UIViewController
+@interface SettingViewController : UIViewController<HeadViewDelegate>
+@property (weak, nonatomic) IBOutlet HeadView *headView;
 
 @end

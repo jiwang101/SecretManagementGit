@@ -37,6 +37,17 @@ static NSString *DEFAULT_SERVICE = @"SecretService";
         success(secretList);
     }
 }
++ (void)getSecretSafeKey:(void (^)(NSString *))success failure:(void (^)(NSError *))failure{
+    NSError *error = nil;
+    NSString *secretsString = [UICKeyChainStore stringForKey:kSecretSafeKey service:DEFAULT_SERVICE error:&error];
+    if (error) {
+        if (failure) {
+            failure(error);
+        }
+    }else{
+        success(secretsString);
+    }
+}
 #pragma mark - private
 - (NSError *)formatError:(NSUInteger)code message:(NSString *)message{
     NSMutableDictionary *userInfo = [NSMutableDictionary dictionary];

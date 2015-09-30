@@ -14,4 +14,9 @@
 
 //容量集合
 #define kSecretList @"SecretList"
+
+/**
+ *  安全KEY
+ */
+#define kSecretSafeKey @"SecretSafeKey"
 #endif

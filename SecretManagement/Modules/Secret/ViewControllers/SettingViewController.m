@@ -9,5 +9,18 @@
 #import "SettingViewController.h"
 
 @implementation SettingViewController
-
+#pragma mark - life cycle
+- (void)viewDidLoad{
+    [super viewDidLoad];
+    [self initView];
+}
+#pragma mark - initView
+- (void)initView{
+    self.headView.titleLabel.text = @"设置";
+    self.headView.delegate = self;
+}
+#pragma mark - HeadViewDelegate
+- (void)responseLeftButton{
+    [self.navigationController popViewControllerAnimated:YES];
+}
 @end

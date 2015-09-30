@@ -20,7 +20,7 @@
 #import "SettingViewController.h"
 #import "SecretUpdateViewController.h"
 
-@interface SecretListViewController()<HeadViewDelegate,UITableViewDelegate,UITableViewDataSource>
+@interface SecretListViewController()<HeadViewDelegate,UITableViewDelegate,UITableViewDataSource,UIAlertViewDelegate>
 @property (weak, nonatomic) IBOutlet HeadView *headView;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (weak, nonatomic) IBOutlet NoDataView *noDataView;
@@ -74,9 +74,17 @@
 }
 #pragma mark - HeadViewDelegate
 - (void)responseLeftButton{
-    
+    [self performSegueWithIdentifier:@"settingSegue" sender:self];
 }
 - (void)responseRightButton{
+    [SecretModel getSecretSafeKey:^(NSString *safeKey) {
+        if ([NSString isBlankString:safeKey]) {
+            [self showMessage:@"请先设置安全密码" cancelButton:@"确定" otherButton:nil delegate:self tag:1000];
+        }else{
+            [self performSegueWithIdentifier:@"updateSegue" sender:self];
+        }
+        
+    } failure:nil];
     
 }
 #pragma mark - UITableViewDelegate&DataSource
@@ -103,5 +111,11 @@
 - (void)updateAction:(UIButton *)sender{
     SecretModel *model = [self.dataSource objectAtIndex:sender.tag];
     
+}
+#pragma mark - UIAlertViewDelegate
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if (alertView.tag == 1000) {
+        [self performSegueWithIdentifier:@"updateSegue" sender:self];
+    }
 }
 @end
