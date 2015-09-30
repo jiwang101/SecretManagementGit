@@ -115,7 +115,7 @@
 #pragma mark - UIAlertViewDelegate
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     if (alertView.tag == 1000) {
-        [self performSegueWithIdentifier:@"updateSegue" sender:self];
+        [self performSegueWithIdentifier:@"SafeKeySegue" sender:self];
     }
 }
 @end

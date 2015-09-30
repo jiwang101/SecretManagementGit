@@ -241,7 +241,7 @@
                         <outlet property="tableView" destination="5ac-Yd-JQG" id="zIl-Nv-ESZ"/>
                         <segue destination="Cbf-uG-NnK" kind="push" identifier="settingSegue" id="rdD-uU-FKf"/>
                         <segue destination="4lm-BW-7wR" kind="push" identifier="updateSegue" id="png-kz-vgZ"/>
-                        <segue destination="z2S-Cs-da0" kind="modal" id="gn3-JU-jE8"/>
+                        <segue destination="z2S-Cs-da0" kind="modal" identifier="SafeKeySegue" id="gn3-JU-jE8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2FZ-Ad-Q0h" userLabel="First Responder" sceneMemberID="firstResponder"/>
