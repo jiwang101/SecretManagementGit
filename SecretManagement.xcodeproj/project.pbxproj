@@ -26,6 +26,8 @@
 		47EC6A921BBBBC5C00AFA93F /* NoDataView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47EC6A901BBBBC5C00AFA93F /* NoDataView.xib */; };
 		47EC6A951BBBC15F00AFA93F /* SecretCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47EC6A941BBBC15F00AFA93F /* SecretCell.m */; };
 		47EC6A991BBBC49500AFA93F /* SecretModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 47EC6A981BBBC49500AFA93F /* SecretModel.m */; };
+		47EC6A9C1BBBD7A300AFA93F /* SecretUpdateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47EC6A9B1BBBD7A300AFA93F /* SecretUpdateViewController.m */; };
+		47EC6A9F1BBBD7B600AFA93F /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47EC6A9E1BBBD7B600AFA93F /* SettingViewController.m */; };
 		782EDA40AA50C0737B6C2878 /* libPods-SecretManagement.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 351BCAF7A60C442F66980444 /* libPods-SecretManagement.a */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +81,10 @@
 		47EC6A941BBBC15F00AFA93F /* SecretCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecretCell.m; sourceTree = "<group>"; };
 		47EC6A971BBBC49500AFA93F /* SecretModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecretModel.h; sourceTree = "<group>"; };
 		47EC6A981BBBC49500AFA93F /* SecretModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecretModel.m; sourceTree = "<group>"; };
+		47EC6A9A1BBBD7A300AFA93F /* SecretUpdateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecretUpdateViewController.h; sourceTree = "<group>"; };
+		47EC6A9B1BBBD7A300AFA93F /* SecretUpdateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecretUpdateViewController.m; sourceTree = "<group>"; };
+		47EC6A9D1BBBD7B600AFA93F /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		47EC6A9E1BBBD7B600AFA93F /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 		7A405F88455308D463FD81B6 /* Pods-SecretManagement.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SecretManagement.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SecretManagement/Pods-SecretManagement.debug.xcconfig"; sourceTree = "<group>"; };
 		E758FA5EBB2F52137627B3CA /* Pods-SecretManagement.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SecretManagement.release.xcconfig"; path = "Pods/Target Support Files/Pods-SecretManagement/Pods-SecretManagement.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -128,6 +134,10 @@
 				47EC6A8C1BBB897D00AFA93F /* SecretListViewController.m */,
 				47EC6A931BBBC15F00AFA93F /* SecretCell.h */,
 				47EC6A941BBBC15F00AFA93F /* SecretCell.m */,
+				47EC6A9A1BBBD7A300AFA93F /* SecretUpdateViewController.h */,
+				47EC6A9B1BBBD7A300AFA93F /* SecretUpdateViewController.m */,
+				47EC6A9D1BBBD7B600AFA93F /* SettingViewController.h */,
+				47EC6A9E1BBBD7B600AFA93F /* SettingViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -434,6 +444,7 @@
 				4712CDD51BBA63FB009F21C9 /* GesturePwdViewController.m in Sources */,
 				472F9B3F1BBA37680083D88E /* AppDelegate.m in Sources */,
 				47EC6A8A1BBB872300AFA93F /* UIViewController+Message.m in Sources */,
+				47EC6A9F1BBBD7B600AFA93F /* SettingViewController.m in Sources */,
 				47EC6A811BBB749C00AFA93F /* HeadView.m in Sources */,
 				47EC6A951BBBC15F00AFA93F /* SecretCell.m in Sources */,
 				47EC6A871BBB7E9200AFA93F /* NSString+Util.m in Sources */,
@@ -442,6 +453,7 @@
 				47EC6A8D1BBB897D00AFA93F /* SecretListViewController.m in Sources */,
 				472F9B3C1BBA37680083D88E /* main.m in Sources */,
 				4712CDCD1BBA60B1009F21C9 /* KKGestureLockView.m in Sources */,
+				47EC6A9C1BBBD7A300AFA93F /* SecretUpdateViewController.m in Sources */,
 				47EC6A911BBBBC5C00AFA93F /* NoDataView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

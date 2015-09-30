@@ -10,10 +10,15 @@
 
 #import "HeadView.h"
 #import "NoDataView.h"
+#import "UIViewController+Message.h"
+#import "NSString+Util.h"
 
 #import "ConstantDefined.h"
 
 #import "SecretCell.h"
+#import "SecretModel.h"
+#import "SettingViewController.h"
+#import "SecretUpdateViewController.h"
 
 @interface SecretListViewController()<HeadViewDelegate,UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet HeadView *headView;
@@ -54,7 +59,18 @@
     self.dataSource = [NSMutableArray array];
 }
 - (void)loadData{
-    
+    [SecretModel getSecretListSuccess:^(NSArray *secretList) {
+        [self.dataSource removeAllObjects];
+        [self.dataSource addObjectsFromArray:secretList];
+        if (self.dataSource.count > 0) {
+            self.noDataView.hidden = YES;
+        }else{
+            self.noDataView.hidden = NO;
+        }
+        [self.tableView reloadData];
+    } failure:^(NSError *error) {
+        [self showError:error];
+    }];
 }
 #pragma mark - HeadViewDelegate
 - (void)responseLeftButton{
@@ -63,15 +79,29 @@
 - (void)responseRightButton{
     
 }
-#pragma mark UITableViewDelegate&DataSource
+#pragma mark - UITableViewDelegate&DataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 0;
+    return self.dataSource.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *cellID = @"secretCell";
-    
+    SecretModel *model = [self.dataSource objectAtIndex:indexPath.row];
+    SecretCell *cell = (SecretCell *)[tableView dequeueReusableCellWithIdentifier:cellID];
+    if (![NSString isBlankString:model.imageName]) {
+        cell.imageview.image = [UIImage imageNamed:model.imageName];
+    }
+    cell.titleLabel.text = model.titleString;
+    cell.detailLabel.text = model.detailString;
+    cell.updateButton.tag = indexPath.row;
+    [cell.updateButton addTarget:self action:@selector(updateAction:) forControlEvents:UIControlEventTouchUpInside];
+    return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+}
+#pragma mark - actions
+- (void)updateAction:(UIButton *)sender{
+    SecretModel *model = [self.dataSource objectAtIndex:sender.tag];
     
 }
 @end
