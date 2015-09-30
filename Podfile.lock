@@ -1,0 +1,29 @@
+PODS:
+  - FMDB (2.5):
+    - FMDB/standard (= 2.5)
+  - FMDB/common (2.5)
+  - FMDB/standard (2.5):
+    - FMDB/common
+  - IQKeyboardManager (3.2.0.3)
+  - JSONModel (1.0.2)
+  - Masonry (0.5.3)
+  - MBProgressHUD (0.9.1)
+  - UICKeyChainStore (1.1.1)
+
+DEPENDENCIES:
+  - FMDB (~> 2.4)
+  - IQKeyboardManager (~> 3.2.0.3)
+  - JSONModel (~> 1.0.1)
+  - Masonry (~> 0.5.3)
+  - MBProgressHUD (~> 0.9)
+  - UICKeyChainStore (~> 1.1.0)
+
+SPEC CHECKSUMS:
+  FMDB: 96e8f1bcc1329e269330f99770ad4285d9003e52
+  IQKeyboardManager: 7b071d1284b47b1c0c19891a042c2c65f118fa85
+  JSONModel: 6ffcb4ffa3659c9e9a2e5d45d6c7705bab187c03
+  Masonry: 9f515466afe48632562342a40a1c224071a1a022
+  MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
+  UICKeyChainStore: 891bcd2fe687c92db8e648cba035c4e662ffa43e
+
+COCOAPODS: 0.37.2

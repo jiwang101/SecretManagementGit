@@ -1,0 +1,656 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4712CDCD1BBA60B1009F21C9 /* KKGestureLockView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4712CDCC1BBA60B1009F21C9 /* KKGestureLockView.m */; };
+		4712CDD11BBA6141009F21C9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4712CDD01BBA6141009F21C9 /* CoreGraphics.framework */; };
+		4712CDD51BBA63FB009F21C9 /* GesturePwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4712CDD41BBA63FB009F21C9 /* GesturePwdViewController.m */; };
+		472F9B3C1BBA37680083D88E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 472F9B3B1BBA37680083D88E /* main.m */; };
+		472F9B3F1BBA37680083D88E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 472F9B3E1BBA37680083D88E /* AppDelegate.m */; };
+		472F9B451BBA37680083D88E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 472F9B431BBA37680083D88E /* Main.storyboard */; };
+		472F9B471BBA37680083D88E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 472F9B461BBA37680083D88E /* Images.xcassets */; };
+		472F9B4A1BBA37680083D88E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 472F9B481BBA37680083D88E /* LaunchScreen.xib */; };
+		472F9B561BBA37680083D88E /* SecretManagementTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 472F9B551BBA37680083D88E /* SecretManagementTests.m */; };
+		47EC6A7C1BBA759500AFA93F /* AppManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 47EC6A7B1BBA759500AFA93F /* AppManager.m */; };
+		47EC6A811BBB749C00AFA93F /* HeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 47EC6A7F1BBB749C00AFA93F /* HeadView.m */; };
+		47EC6A821BBB749C00AFA93F /* HeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47EC6A801BBB749C00AFA93F /* HeadView.xib */; };
+		47EC6A871BBB7E9200AFA93F /* NSString+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 47EC6A861BBB7E9200AFA93F /* NSString+Util.m */; };
+		47EC6A8A1BBB872300AFA93F /* UIViewController+Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 47EC6A891BBB872300AFA93F /* UIViewController+Message.m */; };
+		47EC6A8D1BBB897D00AFA93F /* SecretListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47EC6A8C1BBB897D00AFA93F /* SecretListViewController.m */; };
+		47EC6A911BBBBC5C00AFA93F /* NoDataView.m in Sources */ = {isa = PBXBuildFile; fileRef = 47EC6A8F1BBBBC5C00AFA93F /* NoDataView.m */; };
+		47EC6A921BBBBC5C00AFA93F /* NoDataView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47EC6A901BBBBC5C00AFA93F /* NoDataView.xib */; };
+		47EC6A951BBBC15F00AFA93F /* SecretCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47EC6A941BBBC15F00AFA93F /* SecretCell.m */; };
+		47EC6A991BBBC49500AFA93F /* SecretModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 47EC6A981BBBC49500AFA93F /* SecretModel.m */; };
+		782EDA40AA50C0737B6C2878 /* libPods-SecretManagement.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 351BCAF7A60C442F66980444 /* libPods-SecretManagement.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		472F9B501BBA37680083D88E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 472F9B2E1BBA37680083D88E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 472F9B351BBA37680083D88E;
+			remoteInfo = SecretManagement;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		351BCAF7A60C442F66980444 /* libPods-SecretManagement.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SecretManagement.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4712CDCB1BBA60B1009F21C9 /* KKGestureLockView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKGestureLockView.h; sourceTree = "<group>"; };
+		4712CDCC1BBA60B1009F21C9 /* KKGestureLockView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KKGestureLockView.m; sourceTree = "<group>"; };
+		4712CDCE1BBA6129009F21C9 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		4712CDD01BBA6141009F21C9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		4712CDD21BBA61B1009F21C9 /* SecretManagement_PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecretManagement_PrefixHeader.pch; sourceTree = "<group>"; };
+		4712CDD31BBA63FB009F21C9 /* GesturePwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GesturePwdViewController.h; sourceTree = "<group>"; };
+		4712CDD41BBA63FB009F21C9 /* GesturePwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GesturePwdViewController.m; sourceTree = "<group>"; };
+		4712CDD71BBA68D1009F21C9 /* SystemRelate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemRelate.h; sourceTree = "<group>"; };
+		472F9B361BBA37680083D88E /* SecretManagement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SecretManagement.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		472F9B3A1BBA37680083D88E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		472F9B3B1BBA37680083D88E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		472F9B3D1BBA37680083D88E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		472F9B3E1BBA37680083D88E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		472F9B441BBA37680083D88E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		472F9B461BBA37680083D88E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		472F9B491BBA37680083D88E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		472F9B4F1BBA37680083D88E /* SecretManagementTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SecretManagementTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		472F9B541BBA37680083D88E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		472F9B551BBA37680083D88E /* SecretManagementTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecretManagementTests.m; sourceTree = "<group>"; };
+		47EC6A7A1BBA759500AFA93F /* AppManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppManager.h; sourceTree = "<group>"; };
+		47EC6A7B1BBA759500AFA93F /* AppManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppManager.m; sourceTree = "<group>"; };
+		47EC6A7E1BBB749C00AFA93F /* HeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeadView.h; sourceTree = "<group>"; };
+		47EC6A7F1BBB749C00AFA93F /* HeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeadView.m; sourceTree = "<group>"; };
+		47EC6A801BBB749C00AFA93F /* HeadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeadView.xib; sourceTree = "<group>"; };
+		47EC6A831BBB79E400AFA93F /* ConstantDefined.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConstantDefined.h; sourceTree = "<group>"; };
+		47EC6A851BBB7E9200AFA93F /* NSString+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Util.h"; sourceTree = "<group>"; };
+		47EC6A861BBB7E9200AFA93F /* NSString+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Util.m"; sourceTree = "<group>"; };
+		47EC6A881BBB872300AFA93F /* UIViewController+Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Message.h"; sourceTree = "<group>"; };
+		47EC6A891BBB872300AFA93F /* UIViewController+Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Message.m"; sourceTree = "<group>"; };
+		47EC6A8B1BBB897D00AFA93F /* SecretListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecretListViewController.h; sourceTree = "<group>"; };
+		47EC6A8C1BBB897D00AFA93F /* SecretListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecretListViewController.m; sourceTree = "<group>"; };
+		47EC6A8E1BBBBC5C00AFA93F /* NoDataView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NoDataView.h; sourceTree = "<group>"; };
+		47EC6A8F1BBBBC5C00AFA93F /* NoDataView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoDataView.m; sourceTree = "<group>"; };
+		47EC6A901BBBBC5C00AFA93F /* NoDataView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoDataView.xib; sourceTree = "<group>"; };
+		47EC6A931BBBC15F00AFA93F /* SecretCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecretCell.h; sourceTree = "<group>"; };
+		47EC6A941BBBC15F00AFA93F /* SecretCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecretCell.m; sourceTree = "<group>"; };
+		47EC6A971BBBC49500AFA93F /* SecretModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecretModel.h; sourceTree = "<group>"; };
+		47EC6A981BBBC49500AFA93F /* SecretModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecretModel.m; sourceTree = "<group>"; };
+		7A405F88455308D463FD81B6 /* Pods-SecretManagement.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SecretManagement.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SecretManagement/Pods-SecretManagement.debug.xcconfig"; sourceTree = "<group>"; };
+		E758FA5EBB2F52137627B3CA /* Pods-SecretManagement.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SecretManagement.release.xcconfig"; path = "Pods/Target Support Files/Pods-SecretManagement/Pods-SecretManagement.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		472F9B331BBA37680083D88E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4712CDD11BBA6141009F21C9 /* CoreGraphics.framework in Frameworks */,
+				782EDA40AA50C0737B6C2878 /* libPods-SecretManagement.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		472F9B4C1BBA37680083D88E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4712CDC41BBA5FCD009F21C9 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				4712CDC51BBA5FCD009F21C9 /* Secret */,
+				4712CDC71BBA5FCD009F21C9 /* UserLogin */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		4712CDC51BBA5FCD009F21C9 /* Secret */ = {
+			isa = PBXGroup;
+			children = (
+				47EC6A961BBBC47F00AFA93F /* Model */,
+				4712CDC61BBA5FCD009F21C9 /* ViewControllers */,
+			);
+			path = Secret;
+			sourceTree = "<group>";
+		};
+		4712CDC61BBA5FCD009F21C9 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				47EC6A8B1BBB897D00AFA93F /* SecretListViewController.h */,
+				47EC6A8C1BBB897D00AFA93F /* SecretListViewController.m */,
+				47EC6A931BBBC15F00AFA93F /* SecretCell.h */,
+				47EC6A941BBBC15F00AFA93F /* SecretCell.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		4712CDC71BBA5FCD009F21C9 /* UserLogin */ = {
+			isa = PBXGroup;
+			children = (
+				4712CDC81BBA5FCD009F21C9 /* ViewControllers */,
+			);
+			path = UserLogin;
+			sourceTree = "<group>";
+		};
+		4712CDC81BBA5FCD009F21C9 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4712CDD31BBA63FB009F21C9 /* GesturePwdViewController.h */,
+				4712CDD41BBA63FB009F21C9 /* GesturePwdViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		4712CDC91BBA5FCD009F21C9 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		4712CDCA1BBA5FCD009F21C9 /* Vendors */ = {
+			isa = PBXGroup;
+			children = (
+				4712CDCB1BBA60B1009F21C9 /* KKGestureLockView.h */,
+				4712CDCC1BBA60B1009F21C9 /* KKGestureLockView.m */,
+			);
+			path = Vendors;
+			sourceTree = "<group>";
+		};
+		4712CDD61BBA68D1009F21C9 /* Macro */ = {
+			isa = PBXGroup;
+			children = (
+				4712CDD71BBA68D1009F21C9 /* SystemRelate.h */,
+				47EC6A831BBB79E400AFA93F /* ConstantDefined.h */,
+			);
+			path = Macro;
+			sourceTree = "<group>";
+		};
+		472F9B2D1BBA37680083D88E = {
+			isa = PBXGroup;
+			children = (
+				472F9B381BBA37680083D88E /* SecretManagement */,
+				472F9B521BBA37680083D88E /* SecretManagementTests */,
+				472F9B371BBA37680083D88E /* Products */,
+				82CB0D22B429E3BC080C1034 /* Pods */,
+				6E79464B23AC73414FC2DA59 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		472F9B371BBA37680083D88E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				472F9B361BBA37680083D88E /* SecretManagement.app */,
+				472F9B4F1BBA37680083D88E /* SecretManagementTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		472F9B381BBA37680083D88E /* SecretManagement */ = {
+			isa = PBXGroup;
+			children = (
+				47EC6A841BBB7E9200AFA93F /* Category */,
+				47EC6A7D1BBB749C00AFA93F /* Views */,
+				4712CDD61BBA68D1009F21C9 /* Macro */,
+				4712CDC41BBA5FCD009F21C9 /* Modules */,
+				4712CDC91BBA5FCD009F21C9 /* Utils */,
+				4712CDCA1BBA5FCD009F21C9 /* Vendors */,
+				472F9B3D1BBA37680083D88E /* AppDelegate.h */,
+				472F9B3E1BBA37680083D88E /* AppDelegate.m */,
+				472F9B431BBA37680083D88E /* Main.storyboard */,
+				472F9B461BBA37680083D88E /* Images.xcassets */,
+				472F9B481BBA37680083D88E /* LaunchScreen.xib */,
+				472F9B391BBA37680083D88E /* Supporting Files */,
+				47EC6A7A1BBA759500AFA93F /* AppManager.h */,
+				47EC6A7B1BBA759500AFA93F /* AppManager.m */,
+			);
+			path = SecretManagement;
+			sourceTree = "<group>";
+		};
+		472F9B391BBA37680083D88E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				472F9B3A1BBA37680083D88E /* Info.plist */,
+				472F9B3B1BBA37680083D88E /* main.m */,
+				4712CDD21BBA61B1009F21C9 /* SecretManagement_PrefixHeader.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		472F9B521BBA37680083D88E /* SecretManagementTests */ = {
+			isa = PBXGroup;
+			children = (
+				472F9B551BBA37680083D88E /* SecretManagementTests.m */,
+				472F9B531BBA37680083D88E /* Supporting Files */,
+			);
+			path = SecretManagementTests;
+			sourceTree = "<group>";
+		};
+		472F9B531BBA37680083D88E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				472F9B541BBA37680083D88E /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		47EC6A7D1BBB749C00AFA93F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				47EC6A8E1BBBBC5C00AFA93F /* NoDataView.h */,
+				47EC6A8F1BBBBC5C00AFA93F /* NoDataView.m */,
+				47EC6A901BBBBC5C00AFA93F /* NoDataView.xib */,
+				47EC6A7E1BBB749C00AFA93F /* HeadView.h */,
+				47EC6A7F1BBB749C00AFA93F /* HeadView.m */,
+				47EC6A801BBB749C00AFA93F /* HeadView.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		47EC6A841BBB7E9200AFA93F /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				47EC6A881BBB872300AFA93F /* UIViewController+Message.h */,
+				47EC6A891BBB872300AFA93F /* UIViewController+Message.m */,
+				47EC6A851BBB7E9200AFA93F /* NSString+Util.h */,
+				47EC6A861BBB7E9200AFA93F /* NSString+Util.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		47EC6A961BBBC47F00AFA93F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				47EC6A971BBBC49500AFA93F /* SecretModel.h */,
+				47EC6A981BBBC49500AFA93F /* SecretModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6E79464B23AC73414FC2DA59 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4712CDD01BBA6141009F21C9 /* CoreGraphics.framework */,
+				4712CDCE1BBA6129009F21C9 /* CoreFoundation.framework */,
+				351BCAF7A60C442F66980444 /* libPods-SecretManagement.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		82CB0D22B429E3BC080C1034 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7A405F88455308D463FD81B6 /* Pods-SecretManagement.debug.xcconfig */,
+				E758FA5EBB2F52137627B3CA /* Pods-SecretManagement.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		472F9B351BBA37680083D88E /* SecretManagement */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 472F9B591BBA37680083D88E /* Build configuration list for PBXNativeTarget "SecretManagement" */;
+			buildPhases = (
+				95247EC075E81295E1E0E6E4 /* Check Pods Manifest.lock */,
+				472F9B321BBA37680083D88E /* Sources */,
+				472F9B331BBA37680083D88E /* Frameworks */,
+				472F9B341BBA37680083D88E /* Resources */,
+				7B1757AF43CE9826879D2DDA /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SecretManagement;
+			productName = SecretManagement;
+			productReference = 472F9B361BBA37680083D88E /* SecretManagement.app */;
+			productType = "com.apple.product-type.application";
+		};
+		472F9B4E1BBA37680083D88E /* SecretManagementTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 472F9B5C1BBA37680083D88E /* Build configuration list for PBXNativeTarget "SecretManagementTests" */;
+			buildPhases = (
+				472F9B4B1BBA37680083D88E /* Sources */,
+				472F9B4C1BBA37680083D88E /* Frameworks */,
+				472F9B4D1BBA37680083D88E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				472F9B511BBA37680083D88E /* PBXTargetDependency */,
+			);
+			name = SecretManagementTests;
+			productName = SecretManagementTests;
+			productReference = 472F9B4F1BBA37680083D88E /* SecretManagementTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		472F9B2E1BBA37680083D88E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "ssf-xiong";
+				TargetAttributes = {
+					472F9B351BBA37680083D88E = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					472F9B4E1BBA37680083D88E = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = 472F9B351BBA37680083D88E;
+					};
+				};
+			};
+			buildConfigurationList = 472F9B311BBA37680083D88E /* Build configuration list for PBXProject "SecretManagement" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 472F9B2D1BBA37680083D88E;
+			productRefGroup = 472F9B371BBA37680083D88E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				472F9B351BBA37680083D88E /* SecretManagement */,
+				472F9B4E1BBA37680083D88E /* SecretManagementTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		472F9B341BBA37680083D88E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				472F9B451BBA37680083D88E /* Main.storyboard in Resources */,
+				472F9B4A1BBA37680083D88E /* LaunchScreen.xib in Resources */,
+				47EC6A821BBB749C00AFA93F /* HeadView.xib in Resources */,
+				472F9B471BBA37680083D88E /* Images.xcassets in Resources */,
+				47EC6A921BBBBC5C00AFA93F /* NoDataView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		472F9B4D1BBA37680083D88E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7B1757AF43CE9826879D2DDA /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SecretManagement/Pods-SecretManagement-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		95247EC075E81295E1E0E6E4 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		472F9B321BBA37680083D88E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4712CDD51BBA63FB009F21C9 /* GesturePwdViewController.m in Sources */,
+				472F9B3F1BBA37680083D88E /* AppDelegate.m in Sources */,
+				47EC6A8A1BBB872300AFA93F /* UIViewController+Message.m in Sources */,
+				47EC6A811BBB749C00AFA93F /* HeadView.m in Sources */,
+				47EC6A951BBBC15F00AFA93F /* SecretCell.m in Sources */,
+				47EC6A871BBB7E9200AFA93F /* NSString+Util.m in Sources */,
+				47EC6A7C1BBA759500AFA93F /* AppManager.m in Sources */,
+				47EC6A991BBBC49500AFA93F /* SecretModel.m in Sources */,
+				47EC6A8D1BBB897D00AFA93F /* SecretListViewController.m in Sources */,
+				472F9B3C1BBA37680083D88E /* main.m in Sources */,
+				4712CDCD1BBA60B1009F21C9 /* KKGestureLockView.m in Sources */,
+				47EC6A911BBBBC5C00AFA93F /* NoDataView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		472F9B4B1BBA37680083D88E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				472F9B561BBA37680083D88E /* SecretManagementTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		472F9B511BBA37680083D88E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 472F9B351BBA37680083D88E /* SecretManagement */;
+			targetProxy = 472F9B501BBA37680083D88E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		472F9B431BBA37680083D88E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				472F9B441BBA37680083D88E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		472F9B481BBA37680083D88E /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				472F9B491BBA37680083D88E /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		472F9B571BBA37680083D88E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		472F9B581BBA37680083D88E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		472F9B5A1BBA37680083D88E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A405F88455308D463FD81B6 /* Pods-SecretManagement.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/SecretManagement/SecretManagement_PrefixHeader.pch";
+				INFOPLIST_FILE = SecretManagement/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		472F9B5B1BBA37680083D88E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E758FA5EBB2F52137627B3CA /* Pods-SecretManagement.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/SecretManagement/SecretManagement_PrefixHeader.pch";
+				INFOPLIST_FILE = SecretManagement/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		472F9B5D1BBA37680083D88E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SecretManagementTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SecretManagement.app/SecretManagement";
+			};
+			name = Debug;
+		};
+		472F9B5E1BBA37680083D88E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SecretManagementTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SecretManagement.app/SecretManagement";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		472F9B311BBA37680083D88E /* Build configuration list for PBXProject "SecretManagement" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				472F9B571BBA37680083D88E /* Debug */,
+				472F9B581BBA37680083D88E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		472F9B591BBA37680083D88E /* Build configuration list for PBXNativeTarget "SecretManagement" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				472F9B5A1BBA37680083D88E /* Debug */,
+				472F9B5B1BBA37680083D88E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		472F9B5C1BBA37680083D88E /* Build configuration list for PBXNativeTarget "SecretManagementTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				472F9B5D1BBA37680083D88E /* Debug */,
+				472F9B5E1BBA37680083D88E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 472F9B2E1BBA37680083D88E /* Project object */;
+}
