@@ -74,6 +74,13 @@
                         <action selector="rightButtonAction:" destination="-1" eventType="touchUpInside" id="eyj-fG-YUb"/>
                     </connections>
                 </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zyi-c4-1ak">
+                    <rect key="frame" x="0.0" y="63" width="320" height="1"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="NnG-Xw-ipV"/>
+                    </constraints>
+                </view>
             </subviews>
             <constraints>
                 <constraint firstItem="UYb-OG-nFf" firstAttribute="top" secondItem="lN7-QS-h8p" secondAttribute="top" constant="-20" id="1MU-bP-LiJ"/>
@@ -87,8 +94,11 @@
                 <constraint firstAttribute="bottom" secondItem="UYb-OG-nFf" secondAttribute="bottom" id="PyX-rY-IHI"/>
                 <constraint firstAttribute="trailing" secondItem="UYb-OG-nFf" secondAttribute="trailing" id="V0d-sg-sob"/>
                 <constraint firstItem="UYb-OG-nFf" firstAttribute="top" secondItem="ewa-ji-Ham" secondAttribute="top" constant="-20" id="Yab-vr-Yjg"/>
+                <constraint firstItem="Zyi-c4-1ak" firstAttribute="leading" secondItem="fde-tA-2im" secondAttribute="leading" id="bFi-UC-gf9"/>
                 <constraint firstItem="ewa-ji-Ham" firstAttribute="trailing" secondItem="UYb-OG-nFf" secondAttribute="trailing" id="cQx-Ec-5GB"/>
+                <constraint firstAttribute="trailing" secondItem="Zyi-c4-1ak" secondAttribute="trailing" id="e9Z-8W-i01"/>
                 <constraint firstItem="UYb-OG-nFf" firstAttribute="top" secondItem="fde-tA-2im" secondAttribute="top" id="fOP-kI-xVk"/>
+                <constraint firstAttribute="bottom" secondItem="Zyi-c4-1ak" secondAttribute="bottom" id="mlK-4I-IK6"/>
                 <constraint firstItem="lN7-QS-h8p" firstAttribute="height" secondItem="jXL-iX-Wvj" secondAttribute="height" id="mo0-9A-JQd"/>
                 <constraint firstItem="cRn-ks-H9y" firstAttribute="bottom" secondItem="UYb-OG-nFf" secondAttribute="bottom" id="rLN-Ge-IOQ"/>
                 <constraint firstItem="lN7-QS-h8p" firstAttribute="centerX" secondItem="jXL-iX-Wvj" secondAttribute="centerX" id="sgD-8Z-1u0"/>

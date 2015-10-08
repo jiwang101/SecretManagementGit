@@ -41,4 +41,31 @@
  *  @param failure 错误信息
  */
 + (void)getSecretSafeKey:(void (^)(NSString *safeKey))success failure:(void (^)(NSError *error))failure;
+
+/**
+ *  更新安全Key
+ *
+ *  @param safeKey 安全Key
+ *  @param success 是否成功
+ *  @param failure 错误信息
+ */
++ (void)updateSafeKey:(NSString *)safeKey success:(void (^)(BOOL isSuccess))success failure:(void (^)(NSError *error))failure;
+
+/**
+ *  更新秘密
+ *
+ *  @param secret  秘密内容
+ *  @param success 是否成功
+ *  @param failure 错误信息
+ */
++ (void)updateSecret:(SecretModel *)secret success:(void (^)(BOOL isSuccess))success failure:(void (^)(NSError *error))failure;
+
+/**
+ *  检查秘密标题是否存在
+ *
+ *  @param secretKey 秘密标题
+ *
+ *  @return yes 存在 no 不存在
+ */
++ (BOOL)checkSecret:(NSString *)secretKey;
 @end

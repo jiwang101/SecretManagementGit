@@ -81,7 +81,7 @@
         if ([NSString isBlankString:safeKey]) {
             [self showMessage:@"请先设置安全密码" cancelButton:@"确定" otherButton:nil delegate:self tag:1000];
         }else{
-            [self performSegueWithIdentifier:@"updateSegue" sender:self];
+            [self performSegueWithIdentifier:@"addSegue" sender:nil];
         }
         
     } failure:nil];
@@ -105,17 +105,34 @@
     return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+    SecretModel *model = [self.dataSource objectAtIndex:indexPath.row];
+    [self performSegueWithIdentifier:@"safeCheckSegue" sender:model];
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 80.0f;
 }
 #pragma mark - actions
 - (void)updateAction:(UIButton *)sender{
     SecretModel *model = [self.dataSource objectAtIndex:sender.tag];
-    
+    [self performSegueWithIdentifier:@"updateSegue" sender:model];
 }
 #pragma mark - UIAlertViewDelegate
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
     if (alertView.tag == 1000) {
         [self performSegueWithIdentifier:@"SafeKeySegue" sender:self];
+    }
+}
+#pragma mark - segue
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"updateSegue"]) {
+        SecretUpdateViewController *vc = [segue destinationViewController];
+        vc.secretType = SecretType_Update;
+        vc.model = sender;
+    }else if ([segue.identifier isEqualToString:@"addSegue"]){
+        SecretUpdateViewController *vc = [segue destinationViewController];
+        vc.secretType = SecretType_Add;
     }
 }
 @end
