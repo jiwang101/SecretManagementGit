@@ -21,11 +21,13 @@
 - (void)initView{
     if (self.secretType == SecretType_Add) {
         self.headView.titleLabel.text = @"添加";
+        self.safeKeyTextField.hidden = YES;
     }else{
         self.headView.titleLabel.text = @"修改";
         self.titleTextField.text = self.model.secretString;
         self.titleTextField.enabled = NO;
         self.remarkTextField.text = self.model.detailString;
+        self.safeKeyTextField.hidden = NO;
     }
     self.headView.delegate = self;
 }
@@ -45,6 +47,17 @@
     if (self.secretType == SecretType_Add && [SecretModel checkSecret:self.titleTextField.text]) {
         [self showText:@"此标题已经存在，请换个标题"];
         return;
+    }
+    if (self.secretType == SecretType_Update) {
+        if ([NSString isBlankString:self.safeKeyTextField.text]) {
+            [self showText:@"安全密码不能为空"];
+            return;
+        }
+        if (![self.safeKeyTextField.text isEqualToString:[SecretModel getSecretSafeKey]]) {
+            [self showText:@"安全密码不正确，请重新输入"];
+            self.safeKeyTextField.text = @"";
+            return ;
+        }
     }
     SecretModel *model = [[SecretModel alloc] init];
     model.titleString = self.titleTextField.text;

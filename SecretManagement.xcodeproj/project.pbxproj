@@ -18,6 +18,7 @@
 		472F9B561BBA37680083D88E /* SecretManagementTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 472F9B551BBA37680083D88E /* SecretManagementTests.m */; };
 		47B9D1B61BC6169200A2A540 /* SafeKeySettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B9D1B51BC6169200A2A540 /* SafeKeySettingViewController.m */; };
 		47B9D1B91BC656FF00A2A540 /* SecretCheckViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B9D1B81BC656FF00A2A540 /* SecretCheckViewController.m */; };
+		47B9D1D71BCF793C00A2A540 /* UIAlertView+Block.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B9D1D61BCF793C00A2A540 /* UIAlertView+Block.m */; };
 		47EC6A7C1BBA759500AFA93F /* AppManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 47EC6A7B1BBA759500AFA93F /* AppManager.m */; };
 		47EC6A811BBB749C00AFA93F /* HeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 47EC6A7F1BBB749C00AFA93F /* HeadView.m */; };
 		47EC6A821BBB749C00AFA93F /* HeadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47EC6A801BBB749C00AFA93F /* HeadView.xib */; };
@@ -68,6 +69,8 @@
 		47B9D1B51BC6169200A2A540 /* SafeKeySettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SafeKeySettingViewController.m; sourceTree = "<group>"; };
 		47B9D1B71BC656FF00A2A540 /* SecretCheckViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecretCheckViewController.h; sourceTree = "<group>"; };
 		47B9D1B81BC656FF00A2A540 /* SecretCheckViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecretCheckViewController.m; sourceTree = "<group>"; };
+		47B9D1D51BCF793C00A2A540 /* UIAlertView+Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Block.h"; sourceTree = "<group>"; };
+		47B9D1D61BCF793C00A2A540 /* UIAlertView+Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Block.m"; sourceTree = "<group>"; };
 		47EC6A7A1BBA759500AFA93F /* AppManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppManager.h; sourceTree = "<group>"; };
 		47EC6A7B1BBA759500AFA93F /* AppManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppManager.m; sourceTree = "<group>"; };
 		47EC6A7E1BBB749C00AFA93F /* HeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeadView.h; sourceTree = "<group>"; };
@@ -278,6 +281,8 @@
 		47EC6A841BBB7E9200AFA93F /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				47B9D1D51BCF793C00A2A540 /* UIAlertView+Block.h */,
+				47B9D1D61BCF793C00A2A540 /* UIAlertView+Block.m */,
 				47EC6A881BBB872300AFA93F /* UIViewController+Message.h */,
 				47EC6A891BBB872300AFA93F /* UIViewController+Message.m */,
 				47EC6A851BBB7E9200AFA93F /* NSString+Util.h */,
@@ -452,6 +457,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4712CDD51BBA63FB009F21C9 /* GesturePwdViewController.m in Sources */,
+				47B9D1D71BCF793C00A2A540 /* UIAlertView+Block.m in Sources */,
 				472F9B3F1BBA37680083D88E /* AppDelegate.m in Sources */,
 				47EC6A8A1BBB872300AFA93F /* UIViewController+Message.m in Sources */,
 				47EC6A9F1BBBD7B600AFA93F /* SettingViewController.m in Sources */,

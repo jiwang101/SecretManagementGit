@@ -38,16 +38,10 @@ static NSString *DEFAULT_SERVICE = @"SecretService";
         success(secretList);
     }
 }
-+ (void)getSecretSafeKey:(void (^)(NSString *))success failure:(void (^)(NSError *))failure{
++ (NSString *)getSecretSafeKey{
     NSError *error = nil;
     NSString *secretsString = [UICKeyChainStore stringForKey:kSecretSafeKey service:DEFAULT_SERVICE error:&error];
-    if (error) {
-        if (failure) {
-            failure(error);
-        }
-    }else{
-        success(secretsString);
-    }
+    return secretsString;
 }
 + (void)updateSafeKey:(NSString *)safeKey success:(void (^)(BOOL))success failure:(void (^)(NSError *))failure{
     NSError *error = nil;
@@ -80,10 +74,29 @@ static NSString *DEFAULT_SERVICE = @"SecretService";
                     newSecretsString = [newSecretsString substringFromIndex:1];
                 }
                 isSuccess = [UICKeyChainStore setString:newSecretsString forKey:kSecretList service:DEFAULT_SERVICE error:&error];
-                success(isSuccess);
             }
+            
+        }
+        success(isSuccess);
+    }
+}
++ (void)deleteSecret:(SecretModel *)secret success:(void (^)(BOOL))success failure:(void (^)(NSError *))failure{
+    NSString *secretsString = [UICKeyChainStore stringForKey:kSecretList service:DEFAULT_SERVICE error:nil];
+    secretsString = [secretsString stringByReplacingOccurrencesOfString:[NSString stringWithFormat:@"|%@",[secret.titleString MD5]] withString:@""];
+    secretsString = [secretsString stringByReplacingOccurrencesOfString:[NSString stringWithFormat:@"%@|",[secret.titleString MD5]] withString:@""];
+    
+    NSError *error = nil;
+    BOOL isSuccess = [UICKeyChainStore setString:@"" forKey:[secret.titleString MD5] service:DEFAULT_SERVICE error:&error];
+    if (error) {
+        if (failure) {
+            failure(error);
+        }
+    }else{
+        if (success) {
+            success(isSuccess);
         }
     }
+
 }
 +(BOOL)checkSecret:(NSString *)secretKey{
     BOOL isHave = NO;

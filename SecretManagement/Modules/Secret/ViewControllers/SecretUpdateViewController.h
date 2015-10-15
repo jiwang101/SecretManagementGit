@@ -10,10 +10,7 @@
 #import "HeadView.h"
 #import "SecretModel.h"
 
-typedef NS_ENUM(NSUInteger, SecretType) {
-    SecretType_Add,
-    SecretType_Update,
-};
+
 @interface SecretUpdateViewController : UIViewController<HeadViewDelegate>
 @property (weak, nonatomic) IBOutlet HeadView *headView;
 @property (assign, nonatomic) SecretType secretType;
@@ -23,5 +20,6 @@ typedef NS_ENUM(NSUInteger, SecretType) {
 @property (weak, nonatomic) IBOutlet UITextField *secretTextField;
 @property (weak, nonatomic) IBOutlet UITextField *remarkTextField;
 - (IBAction)commitAction:(id)sender;
+@property (weak, nonatomic) IBOutlet UITextField *safeKeyTextField;
 
 @end

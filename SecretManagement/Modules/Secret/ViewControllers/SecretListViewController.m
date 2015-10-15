@@ -12,6 +12,7 @@
 #import "NoDataView.h"
 #import "UIViewController+Message.h"
 #import "NSString+Util.h"
+#import "UIAlertView+Block.h"
 
 #import "ConstantDefined.h"
 
@@ -19,6 +20,7 @@
 #import "SecretModel.h"
 #import "SettingViewController.h"
 #import "SecretUpdateViewController.h"
+#import "SecretCheckViewController.h"
 
 @interface SecretListViewController()<HeadViewDelegate,UITableViewDelegate,UITableViewDataSource,UIAlertViewDelegate>
 @property (weak, nonatomic) IBOutlet HeadView *headView;
@@ -77,14 +79,11 @@
     [self performSegueWithIdentifier:@"settingSegue" sender:self];
 }
 - (void)responseRightButton{
-    [SecretModel getSecretSafeKey:^(NSString *safeKey) {
-        if ([NSString isBlankString:safeKey]) {
-            [self showMessage:@"请先设置安全密码" cancelButton:@"确定" otherButton:nil delegate:self tag:1000];
-        }else{
-            [self performSegueWithIdentifier:@"addSegue" sender:nil];
-        }
-        
-    } failure:nil];
+    if ([NSString isBlankString:[SecretModel getSecretSafeKey]]) {
+        [self showMessage:@"请先设置安全密码" cancelButton:@"确定" otherButton:nil delegate:self tag:1000];
+    }else{
+        [self performSegueWithIdentifier:@"addSegue" sender:nil];
+    }
     
 }
 #pragma mark - UITableViewDelegate&DataSource
@@ -111,6 +110,20 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 80.0f;
 }
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath{
+    return YES;
+}
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithMessage:@"是否确定删除" cancelButtonTitle:@"取消" otherButtonTitles:@[@"确定"]];
+        [alert showUsingBlock:^(UIAlertView *alertView, NSInteger buttonIndex) {
+            if (buttonIndex == 1) {
+                SecretModel *model = [self.dataSource objectAtIndex:indexPath.row];
+                [self performSegueWithIdentifier:@"deleteSegue" sender:model];
+            }
+        }];
+    }
+}
 #pragma mark - actions
 - (void)updateAction:(UIButton *)sender{
     SecretModel *model = [self.dataSource objectAtIndex:sender.tag];
@@ -133,6 +146,14 @@
     }else if ([segue.identifier isEqualToString:@"addSegue"]){
         SecretUpdateViewController *vc = [segue destinationViewController];
         vc.secretType = SecretType_Add;
+    }else if ([segue.identifier isEqualToString:@"safeCheckSegue"]){
+        SecretCheckViewController *vc = [segue destinationViewController];
+        vc.secretModel = sender;
+        vc.secretType = SecretType_Check;
+    }else if ([segue.identifier isEqualToString:@"deleteSegue"]){
+        SecretCheckViewController *vc = [segue destinationViewController];
+        vc.secretModel = sender;
+        vc.secretType = SecretType_Delete;
     }
 }
 @end

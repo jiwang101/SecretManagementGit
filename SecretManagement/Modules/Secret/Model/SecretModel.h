@@ -7,7 +7,12 @@
 //
 
 #import "JSONModel.h"
-
+typedef NS_ENUM(NSUInteger, SecretType) {
+    SecretType_Add,
+    SecretType_Update,
+    SecretType_Delete,
+    SecretType_Check,
+};
 @interface SecretModel : JSONModel
 /**
  *  图片
@@ -37,10 +42,8 @@
 /**
  *  读取安全Key
  *
- *  @param success 返回安全KEY
- *  @param failure 错误信息
  */
-+ (void)getSecretSafeKey:(void (^)(NSString *safeKey))success failure:(void (^)(NSError *error))failure;
++ (NSString *)getSecretSafeKey;
 
 /**
  *  更新安全Key
@@ -59,6 +62,15 @@
  *  @param failure 错误信息
  */
 + (void)updateSecret:(SecretModel *)secret success:(void (^)(BOOL isSuccess))success failure:(void (^)(NSError *error))failure;
+
+/**
+ *  删除密码
+ *
+ *  @param secret  秘密内容
+ *  @param success
+ *  @param failure 
+ */
++ (void)deleteSecret:(SecretModel *)secret success:(void (^)(BOOL isSuccess))success failure:(void (^)(NSError *error))failure;
 
 /**
  *  检查秘密标题是否存在
